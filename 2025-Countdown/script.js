@@ -1,6 +1,6 @@
 const countdown = () => {
     const now = new Date().getTime();
-    const newYear = new Date('Dec 31, 2024 11:35:00').getTime();
+    const newYear = new Date('Jan 1, 2025 00:00:00').getTime();
     const distance = newYear - now;
 
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
