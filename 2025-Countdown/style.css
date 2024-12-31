@@ -1,43 +1,81 @@
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
     margin: 0;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-.countdown-container {
+.container {
     text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 #countdown {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
     font-size: 2em;
-    margin-top: 20px;
+    gap: 10px; /* Add space between countdown elements */
 }
 
-footer {
+#countdown div {
+    flex: 1;
+    text-align: center; /* Center align text within each countdown element */
+}
+
+#confetti-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #countdown {
+        flex-direction: column; /* Stack countdown elements vertically on mobile */
+        font-size: 1.5em;
+    }
+
+    #countdown div {
+        margin-bottom: 10px; /* Add space between vertically stacked elements */
+    }
+}
+
+.footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
     padding: 10px;
-    background-color: #f0f0f0;
-    border-top: 1px solid #e0e0e0;
-    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.875rem; /* Adjust font size for better readability on mobile */
-}
-
-footer a {
-    color: inherit;
+.footer a {
+    color: rgb(176, 255, 255);
     text-decoration: none;
+}
+
+.footer a:hover {
+    color: rgba(176, 255, 255, 0.8);
+}
+
+.footer a:visited {
+    color: rgb(176, 255, 255);
 }
